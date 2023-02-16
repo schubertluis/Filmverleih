@@ -1,0 +1,24 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schubertluis/Filmverleih.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schubertluis/Filmverleih/issues"
+  },
+  "homepage": "https://github.com/schubertluis/Filmverleih#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-validators": "^1.0.4",
+    "nodeman": "^1.1.2"
+  }
+}
