@@ -1,4 +1,5 @@
 import express from "express";
+import bodyParser from "body-parser";
 
 //app initialisieren
 const app = express();
@@ -34,4 +35,9 @@ const films = [
 
 app.get("/", (req, res) => {
   res.status(200).send(films);
+});
+
+app.post("/films", (req, res) => {
+  films.push(req.body);
+  res.status(201).send(`Added movie to movie collection`);
 });
