@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import router from "./filmsRoutes.js";
+import router from "./routes/filmsRoutes.js";
 
 //app initialisieren
 const app = express();
