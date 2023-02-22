@@ -5,7 +5,7 @@ import {
   getFilms,
   addFilm,
   newFilmValidators,
-} from "./filmsControllers";
+} from "../../filmsControllers.js";
 
 const router = express.Router();
 
