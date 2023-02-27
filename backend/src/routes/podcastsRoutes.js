@@ -5,7 +5,7 @@ import {
   getPodcasts,
   addPodcast,
   newPodcastValidators,
-} from "../controllers/podcastsControllers.js";
+} from "../controllers/podcastsController.js";
 
 const router = express.Router();
 
