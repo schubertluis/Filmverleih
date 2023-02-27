@@ -1,7 +1,7 @@
 import express from "express";
 import {
-  findFilms,
-  findFilmsById,
+  getFilmByTitle,
+  getFilmById,
   getFilms,
   addFilm,
   newFilmValidators,
@@ -10,8 +10,8 @@ import {
 const router = express.Router();
 
 router.get("/", getFilms);
-router.get("/search", findFilms);
-router.get("/:id", findFilmsById);
+router.get("/search", getFilmByTitle);
+router.get("/:id", getFilmById);
 router.post("/", newFilmValidators, addFilm);
 
-export default router;
+export default filmRouter;
