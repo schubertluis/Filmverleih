@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const podcastSchema = new mongoose.Schema( {
     title: String,
     year: Number,
-    Available: boolean,
+    available: boolean,
     broadcaster: String,
     topic: String
 });
