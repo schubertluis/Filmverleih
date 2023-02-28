@@ -7,11 +7,11 @@ import {
   newFilmValidators,
 } from "../controllers/filmsControllers.js";
 
-const router = express.Router();
+const filmRouter = express.Router();
 
-router.get("/", getFilms);
-router.get("/search", getFilmByTitle);
-router.get("/:id", getFilmById);
-router.post("/", newFilmValidators, addFilm);
+filmRouter.get("/", getFilms);
+filmRouter.get("/search", getFilmByTitle);
+filmRouter.get("/:id", getFilmById);
+filmRouter.post("/", newFilmValidators, addFilm);
 
 export default filmRouter;

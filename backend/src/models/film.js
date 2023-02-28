@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const filmSchema = new mongoose.Schema( {
     title: String,
     year: Number,
-    available: boolean,
+    available: Boolean,
     genre: String,
     studio: String
 });

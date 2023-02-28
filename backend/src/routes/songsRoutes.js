@@ -7,11 +7,11 @@ import {
   newSongValidators,
 } from "../controllers/songsControllers.js";
 
-const router = express.Router();
+const songRouter = express.Router();
 
-router.get("/", getSongs);
-router.get("/search", getSongByTitle);
-router.get("/:id", getSongById);
-router.post("/", newSongValidators, addSong);
+songRouter.get("/", getSongs);
+songRouter.get("/search", getSongByTitle);
+songRouter.get("/:id", getSongById);
+songRouter.post("/", newSongValidators, addSong);
 
 export default songRouter;

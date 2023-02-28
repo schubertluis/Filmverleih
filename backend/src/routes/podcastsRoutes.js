@@ -7,11 +7,11 @@ import {
   newPodcastValidators,
 } from "../controllers/podcastsControllers.js";
 
-const router = express.Router();
+const podcastRouter = express.Router();
 
-router.get("/", getPodcasts);
-router.get("/search", getPodcastByTitle);
-router.get("/:id", getPodcastById);
-router.post("/", newPodcastValidators, addPodcast);
+podcastRouter.get("/", getPodcasts);
+podcastRouter.get("/search", getPodcastByTitle);
+podcastRouter.get("/:id", getPodcastById);
+podcastRouter.post("/", newPodcastValidators, addPodcast);
 
 export default podcastRouter;

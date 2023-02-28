@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import filmRouter from "./routes/filmsRoutes.js";
 import songsRouter from "./routes/songsRoutes.js";
-import podcastsRouter from "./routes/podacastsRoutes.js";
+import podcastsRouter from "./routes/podcastsRoutes.js";
 import mongoose from "mongoose";
 
 //initialize app

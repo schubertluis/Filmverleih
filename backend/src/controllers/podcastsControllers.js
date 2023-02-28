@@ -11,7 +11,7 @@ export const getPodcastById = async (req, res) => {
   res.status(200).send(podcast);
 };
 
-export const getPodcastmByTitle = async (req, res) => {
+export const getPodcastByTitle = async (req, res) => {
   let podcast = await Podcast.find({ title: req.query.title });
   res.status(200).send(podcast);
 };
