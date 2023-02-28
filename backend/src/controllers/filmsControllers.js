@@ -34,6 +34,10 @@ export const addFilm = async (req, res) => {
   film.save(film).then((todo) => res.status(201).send(todo));
 };
 
+export const updateFilm = async (req, res) => {
+  
+}
+
 // attached as second param in a route
 export const newFilmValidators = [
   check("title").notEmpty().withMessage("Title field required"),
