@@ -4,6 +4,9 @@ import filmRouter from "./routes/filmsRoutes.js";
 import songsRouter from "./routes/songsRoutes.js";
 import podcastsRouter from "./routes/podcastsRoutes.js";
 import mongoose from "mongoose";
+import swaggerUI from "swagger-ui-express"
+import swaggerDocs from "../swaggerDocs.js";
+
 
 //initialize app
 const app = express();
@@ -13,6 +16,7 @@ app.use(bodyParser.json());
 app.use("/films", filmRouter);
 app.use("/songs", songsRouter);
 app.use("/podcasts", podcastsRouter);
+app.use("/api",swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 //connecting database
 mongoose.connect("mongodb://mongo:27017/test").then(() => {
