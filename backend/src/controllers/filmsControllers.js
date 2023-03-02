@@ -12,31 +12,29 @@ export const getFilmById = async (req, res) => {
 };
 
 export const getFilmByTitle = async (req, res) => {
-  let film = await Film.find({title: req.query.title});
+  let film = await Film.find({ title: req.query.title });
   res.status(200).send(film);
 };
 
 export const addFilm = async (req, res) => {
   const error = validationResult(req);
-  
+
   if (!error.isEmpty()) {
-    return res.status(400).json({error: error.array()});
+    return res.status(400).json({ error: error.array() });
   }
 
-  const film = new Film( {
+  const film = new Film({
     title: req.body.title,
     year: req.body.year,
     available: req.body.avaiable,
     genre: req.body.genre,
-    studio: req.body.studio
+    studio: req.body.studio,
   });
 
   film.save(film).then((todo) => res.status(201).send(todo));
 };
 
-export const updateFilm = async (req, res) => {
-  
-}
+export const updateFilm = async (req, res) => {};
 
 // attached as second param in a route
 export const newFilmValidators = [
@@ -44,5 +42,5 @@ export const newFilmValidators = [
   check("year").notEmpty().withMessage("Year field required"),
   check("available").notEmpty().withMessage("Available field required"),
   check("genre").notEmpty().withMessage("Genre field required"),
-  check("studio").notEmpty().withMessage("Studio field required")
+  check("studio").notEmpty().withMessage("Studio field required"),
 ];

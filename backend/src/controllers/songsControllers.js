@@ -12,23 +12,23 @@ export const getSongById = async (req, res) => {
 };
 
 export const getSongByTitle = async (req, res) => {
-  let song = await Song.find({title: req.query.title});
+  let song = await Song.find({ title: req.query.title });
   res.status(200).send(song);
 };
 
 export const addSong = async (req, res) => {
   const error = validationResult(req);
-  
+
   if (!error.isEmpty()) {
-    return res.status(400).json({error: error.array()});
+    return res.status(400).json({ error: error.array() });
   }
 
-  const song = new Song( {
+  const song = new Song({
     title: req.body.title,
     year: req.body.year,
     available: req.body.avaiable,
     genre: req.body.genre,
-    artist: req.body.artist
+    artist: req.body.artist,
   });
 
   song.save(song).then((todo) => res.status(201).send(todo));
@@ -38,7 +38,7 @@ export const addSong = async (req, res) => {
 export const newSongValidators = [
   check("title").notEmpty().withMessage("Title field required"),
   check("year").notEmpty().withMessage("Year field required"),
-  check("available").notEmpty().withMessage("Available field required"),
+  check("available").notEmpty().withMessage("Avaiable field required"),
   check("genre").notEmpty().withMessage("Genre field required"),
-  check("artist").notEmpty().withMessage("Artist field required")
+  check("artist").notEmpty().withMessage("Artist field required"),
 ];
