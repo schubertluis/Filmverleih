@@ -34,6 +34,25 @@ export const addSong = async (req, res) => {
   song.save(song).then((todo) => res.status(201).send(todo));
 };
 
+export const patchSong = async (req, res) => {
+  const error = validationResult(req);
+  
+  if (!error.isEmpty()) {
+    return res.status(400).json({error: error.array()});
+  }
+
+  let response = await Song.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+  });
+
+  res.status(200).send(response);
+}
+
+export const deleteSong = async (req, res) => {
+  let response = await Song.findByIdAndDelete(req.params.id);
+  res.status(200).send(response);
+}
+
 // attached as second param in a route
 export const newSongValidators = [
   check("title").notEmpty().withMessage("Title field required"),

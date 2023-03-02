@@ -34,7 +34,24 @@ export const addFilm = async (req, res) => {
   film.save(film).then((todo) => res.status(201).send(todo));
 };
 
-export const updateFilm = async (req, res) => {};
+export const patchFilm = async (req, res) => {
+  const error = validationResult(req);
+
+  if (!error.isEmpty()) {
+    return res.status(400).json({ error: error.array() });
+  }
+
+  let response = await Film.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+  });
+
+  res.status(200).send(response);
+};
+
+export const deleteFilm = async (req, res) => {
+  let response = await Film.findByIdAndDelete(req.params.id);
+  res.status(200).send(response);
+};
 
 // attached as second param in a route
 export const newFilmValidators = [

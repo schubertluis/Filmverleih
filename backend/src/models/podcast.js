@@ -5,7 +5,7 @@ const podcastSchema = new mongoose.Schema({
   year: Number,
   available: Boolean,
   broadcaster: String,
-  topic: String,
+  topic: String
 });
 
 export const Podcast = mongoose.model("podcasts", podcastSchema);

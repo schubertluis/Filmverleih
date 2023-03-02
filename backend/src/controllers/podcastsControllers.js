@@ -34,6 +34,25 @@ export const addPodcast = async (req, res) => {
   podcast.save(podcast).then((todo) => res.status(201).send(todo));
 };
 
+export const patchPodcast = async (req, res) => {
+  const error = validationResult(req);
+  
+  if (!error.isEmpty()) {
+    return res.status(400).json({error: error.array()});
+  }
+
+  let response = await Podcast.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+  });
+
+  res.status(200).send(response);
+}
+
+export const deletePodcast = async (req, res) => {
+  let response = await Podcast.findByIdAndDelete(req.params.id);
+  res.status(200).send(response);
+}
+
 // attached as second param in a route
 export const newPodcastValidators = [
   check("title").notEmpty().withMessage("Title field required"),
