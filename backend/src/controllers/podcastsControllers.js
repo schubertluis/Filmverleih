@@ -2,6 +2,7 @@ import { check, validationResult } from "express-validator";
 import { Podcast } from "../models/podcast.js";
 
 export const getPodcasts = async (req, res) => {
+  res.set("Access-Control-Allow-Origin", "https://localhost:4000");
   const podcasts = await Podcast.find();
   res.status(200).send(podcasts);
 };
@@ -36,22 +37,22 @@ export const addPodcast = async (req, res) => {
 
 export const patchPodcast = async (req, res) => {
   const error = validationResult(req);
-  
+
   if (!error.isEmpty()) {
-    return res.status(400).json({error: error.array()});
+    return res.status(400).json({ error: error.array() });
   }
 
   let response = await Podcast.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
+    new: true,
   });
 
   res.status(200).send(response);
-}
+};
 
 export const deletePodcast = async (req, res) => {
   let response = await Podcast.findByIdAndDelete(req.params.id);
   res.status(200).send(response);
-}
+};
 
 // attached as second param in a route
 export const newPodcastValidators = [

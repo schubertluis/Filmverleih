@@ -2,6 +2,7 @@ import { check, validationResult } from "express-validator";
 import { Song } from "../models/song.js";
 
 export const getSongs = async (req, res) => {
+  res.set("Access-Control-Allow-Origin", "https://localhost:4000");
   const songs = await Song.find();
   res.status(200).send(songs);
 };
@@ -36,22 +37,22 @@ export const addSong = async (req, res) => {
 
 export const patchSong = async (req, res) => {
   const error = validationResult(req);
-  
+
   if (!error.isEmpty()) {
-    return res.status(400).json({error: error.array()});
+    return res.status(400).json({ error: error.array() });
   }
 
   let response = await Song.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
+    new: true,
   });
 
   res.status(200).send(response);
-}
+};
 
 export const deleteSong = async (req, res) => {
   let response = await Song.findByIdAndDelete(req.params.id);
   res.status(200).send(response);
-}
+};
 
 // attached as second param in a route
 export const newSongValidators = [
