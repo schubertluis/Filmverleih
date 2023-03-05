@@ -24,7 +24,7 @@ class App extends React.Component {
         <div className="data">
           {/* generates a div for every entry */}
           {this.state.films.map((film, key) => (
-            <div key={key}>
+            <div id="film" key={key}>
               <b>{film.title}</b> <br />
               Year: {film.year} <br />
               Genre: {film.genre} <br />

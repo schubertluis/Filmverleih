@@ -26,3 +26,9 @@ body {
   text-align: center;
   color: brown;
 }
+
+#film {
+  padding-bottom: 10pt;
+  border: solid;
+  background-color: darkseagreen;
+}
