@@ -2,7 +2,7 @@ import { check, validationResult } from "express-validator";
 import { Film } from "../models/film.js";
 
 export const getFilms = async (req, res) => {
-  res.set("Access-Control-Allow-Origin", "http://localhost:4000");
+  res.set("Access-Control-Allow-Origin", "http://localhost:3000");
   const films = await Film.find();
   res.status(200).send(films);
 };

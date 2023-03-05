@@ -25,7 +25,10 @@ class App extends React.Component {
           {/* generates a div for every entry */}
           {this.state.films.map((film, key) => (
             <div key={key}>
-              {film.title} by {film.studio}
+              <b>{film.title}</b> <br />
+              Year: {film.year} <br />
+              Genre: {film.genre} <br />
+              Production: {film.studio} <br />
             </div>
           ))}
         </div>
