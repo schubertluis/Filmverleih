@@ -1,5 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(to bottom right, #8c918d, #828f82, #464742);
 }
 
 #title {
@@ -7,28 +8,38 @@ body {
   text-align: center;
   margin-bottom: 1%;
   margin-top: 5%;
+  font-family: monospace;
 }
 
 #fetcher {
-  background-color: brown;
+  background-color: #151414;
   color: beige;
   border: none;
   padding: 15px 32px;
   text-align: center;
   font-weight: bold;
-  font-size: 15px;
+  font-size: x-large;
   margin: 0 auto;
   display: block;
+  border-radius: 15pt;
+  font-family: monospace;
 }
 
 .data {
   margin-top: 4%;
   text-align: center;
-  color: brown;
+  color: #f7f7cd;
+  display: flex;
+  flex-direction: row-reverse;
+  width: max-content;
+  align-self: center;
+  font-family: monospace;
+  font-size: large;
 }
 
 #film {
-  padding-bottom: 10pt;
-  border: solid;
-  background-color: darkseagreen;
+  padding: 10pt;
+  background-color: #1e2322;
+  margin: 10pt;
+  border-radius: 15pt;
 }

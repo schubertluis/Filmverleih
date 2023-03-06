@@ -2,7 +2,7 @@ import { check, validationResult } from "express-validator";
 import { Song } from "../models/song.js";
 
 export const getSongs = async (req, res) => {
-  res.set("Access-Control-Allow-Origin", "https://localhost:4000");
+  res.set("Access-Control-Allow-Origin", "http://localhost:3000");
   const songs = await Song.find();
   res.status(200).send(songs);
 };
@@ -27,7 +27,7 @@ export const addSong = async (req, res) => {
   const song = new Song({
     title: req.body.title,
     year: req.body.year,
-    available: req.body.avaiable,
+    available: req.body.available,
     genre: req.body.genre,
     artist: req.body.artist,
   });

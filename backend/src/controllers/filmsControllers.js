@@ -27,7 +27,7 @@ export const addFilm = async (req, res) => {
   const film = new Film({
     title: req.body.title,
     year: req.body.year,
-    available: req.body.avaiable,
+    available: req.body.available,
     genre: req.body.genre,
     studio: req.body.studio,
   });

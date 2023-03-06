@@ -2,7 +2,7 @@ import { check, validationResult } from "express-validator";
 import { Podcast } from "../models/podcast.js";
 
 export const getPodcasts = async (req, res) => {
-  res.set("Access-Control-Allow-Origin", "https://localhost:4000");
+  res.set("Access-Control-Allow-Origin", "http://localhost:3000");
   const podcasts = await Podcast.find();
   res.status(200).send(podcasts);
 };
@@ -27,7 +27,7 @@ export const addPodcast = async (req, res) => {
   const podcast = new Podcast({
     title: req.body.title,
     year: req.body.year,
-    available: req.body.avaiable,
+    available: req.body.available,
     broadcaster: req.body.broadcaster,
     topic: req.body.topic,
   });
