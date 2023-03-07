@@ -43,7 +43,7 @@ export const patchFilm = async (req, res) => {
   }
 
   let response = await Film.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
+    new: false,
   });
 
   res.status(200).send(response);
