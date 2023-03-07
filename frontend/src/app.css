@@ -25,6 +25,10 @@ body {
   font-family: monospace;
 }
 
+#fetcher:hover {
+  background-color: #151414ac;
+}
+
 .data {
   margin-top: 4%;
   text-align: center;
@@ -42,4 +46,8 @@ body {
   background-color: #1e2322;
   margin: 10pt;
   border-radius: 15pt;
+}
+
+#film:hover {
+  background-color: #1e232294;
 }
