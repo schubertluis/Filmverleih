@@ -13,8 +13,8 @@ const swaggerDocs = {
     basePath: "/medien",
     tags: [
       {
-        name: "Books",
-        description: "books in the database",
+        name: "Medien",
+        description: "media in the database",
       },
     ],
     consumes: ["application/json"],
@@ -22,27 +22,27 @@ const swaggerDocs = {
     paths: {
       "/": {
         get: {
-          tags: ["Books"],
-          summary: "Get all books in the system",
+          tags: ["Medien"],
+          summary: "Get all media in the system",
           responses: {
             200: {
               description: "OK",
               schema: {
-                $ref: "#/definitions/Book",
+                $ref: "#/definitions/Media",
               },
             },
           },
         },
         post: {
-          tags: ["Books"],
-          summary: "Add a new book",
+          tags: ["Medien"],
+          summary: "Add a new media",
           parameters: [
             {
-              name: "book",
-              in: "body",
-              description: "Book to be added",
+              name: "media",
+              in: "media",
+              description: "Media to be added",
               schema: {
-                $ref: "#/definitions/Book",
+                $ref: "#/definitions/Media",
               },
             },
           ],
@@ -50,7 +50,7 @@ const swaggerDocs = {
             201: {
               description: "Created",
               schema: {
-                $ref: "#/definitions/Book",
+                $ref: "#/definitions/Media",
               },
             },
           },
@@ -58,15 +58,15 @@ const swaggerDocs = {
       },
       "/{id}": {
         get: {
-          tags: ["Books"],
-          summary: "Get a specific book by id",
+          tags: ["Media"],
+          summary: "Get a specific media by id",
           parameters: [
             {
               name: "id",
               in: "body",
-              description: "Id of the book searched for",
+              description: "Id of the media searched for",
               schema: {
-                $ref: "#/definitions/Book",
+                $ref: "#/definitions/Media",
               },
             },
           ],
@@ -74,7 +74,7 @@ const swaggerDocs = {
             200: {
               description: "OK",
               schema: {
-                $ref: "#/definitions/Book",
+                $ref: "#/definitions/Media",
               },
             },
           },
@@ -82,15 +82,15 @@ const swaggerDocs = {
       },
       "/search": {
         get: {
-          tags: ["Books"],
-          summary: "Get a specific book by title",
+          tags: ["Media"],
+          summary: "Get a specific media by title",
           parameters: [
             {
               name: "title",
               in: "path",
-              description: "Title of the book searched for",
+              description: "Title of the media searched for",
               schema: {
-                $ref: "#/definitions/Book",
+                $ref: "#/definitions/Media",
               },
             },
           ],
@@ -98,7 +98,7 @@ const swaggerDocs = {
             200: {
               description: "OK",
               schema: {
-                $ref: "#/definitions/Book",
+                $ref: "#/definitions/Media",
               },
             },
           },
