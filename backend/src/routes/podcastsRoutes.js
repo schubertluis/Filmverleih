@@ -13,9 +13,9 @@ const podcastRouter = express.Router();
 
 podcastRouter.get("/", getPodcasts);
 podcastRouter.get("/search", getPodcastByTitle);
-podcastRouter.get("/:id", getPodcastById);
+podcastRouter.get("/id/:id", getPodcastById);
 podcastRouter.post("/", newPodcastValidators, addPodcast);
-podcastRouter.patch("/:id", newPodcastValidators, patchPodcast);
-podcastRouter.delete("/:id", deletePodcast);
+podcastRouter.patch("/id/:id", newPodcastValidators, patchPodcast);
+podcastRouter.delete("/id/:id", deletePodcast);
 
 export default podcastRouter;

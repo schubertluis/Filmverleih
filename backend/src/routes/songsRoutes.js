@@ -13,9 +13,9 @@ const songRouter = express.Router();
 
 songRouter.get("/", getSongs);
 songRouter.get("/search", getSongByTitle);
-songRouter.get("/:id", getSongById);
+songRouter.get("/id/:id", getSongById);
 songRouter.post("/", newSongValidators, addSong);
-songRouter.patch("/:id", newSongValidators, patchSong);
-songRouter.delete("/:id", deleteSong);
+songRouter.patch("/id/:id", newSongValidators, patchSong);
+songRouter.delete("/id/:id", deleteSong);
 
 export default songRouter;

@@ -13,9 +13,9 @@ const filmRouter = express.Router();
 
 filmRouter.get("/", getFilms);
 filmRouter.get("/search", getFilmByTitle);
-filmRouter.get("/:id", getFilmById);
+filmRouter.get("/id/:id", getFilmById);
 filmRouter.post("/", newFilmValidators, addFilm);
-filmRouter.patch("/:id", newFilmValidators, patchFilm);
-filmRouter.delete("/:id", deleteFilm);
+filmRouter.patch("/id/:id", newFilmValidators, patchFilm);
+filmRouter.delete("/id/:id", deleteFilm);
 
 export default filmRouter;
