@@ -23,6 +23,7 @@ body {
   display: block;
   border-radius: 15pt;
   font-family: monospace;
+  cursor: pointer;
 }
 
 #fetcher:hover {
