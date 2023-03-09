@@ -11,6 +11,7 @@ import swaggerDocs from "../swaggerDocs.js";
 const app = express();
 const port = 4000;
 
+//directing paths to routers
 app.use(bodyParser.json());
 app.use("/films", filmRouter);
 app.use("/songs", songsRouter);

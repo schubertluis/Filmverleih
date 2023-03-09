@@ -11,6 +11,7 @@ import {
 
 const podcastRouter = express.Router();
 
+//routing to the methods
 podcastRouter.get("/", getPodcasts);
 podcastRouter.get("/search", getPodcastByTitle);
 podcastRouter.get("/id/:id", getPodcastById);

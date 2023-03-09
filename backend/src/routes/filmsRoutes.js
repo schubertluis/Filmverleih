@@ -11,6 +11,7 @@ import {
 
 const filmRouter = express.Router();
 
+//routing to the methods
 filmRouter.get("/", getFilms);
 filmRouter.get("/search", getFilmByTitle);
 filmRouter.get("/id/:id", getFilmById);

@@ -11,6 +11,7 @@ import {
 
 const songRouter = express.Router();
 
+//routing to the methods
 songRouter.get("/", getSongs);
 songRouter.get("/search", getSongByTitle);
 songRouter.get("/id/:id", getSongById);
