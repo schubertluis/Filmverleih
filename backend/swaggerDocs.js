@@ -37,7 +37,7 @@ const swaggerDocs = {
             200: {
               description: "OK",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Film",
               },
             },
           },
@@ -51,7 +51,7 @@ const swaggerDocs = {
               in: "film",
               description: "Film to be added",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Film",
               },
             },
           ],
@@ -59,7 +59,7 @@ const swaggerDocs = {
             201: {
               description: "Created",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Film",
               },
             },
           },
@@ -73,7 +73,7 @@ const swaggerDocs = {
             200: {
               description: "OK",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Podcast",
               },
             },
           },
@@ -87,7 +87,7 @@ const swaggerDocs = {
               in: "podcast",
               description: "Podcast to be added",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Podcast",
               },
             },
           ],
@@ -95,7 +95,7 @@ const swaggerDocs = {
             201: {
               description: "Created",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Podcast",
               },
             },
           },
@@ -109,7 +109,7 @@ const swaggerDocs = {
             200: {
               description: "OK",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Song",
               },
             },
           },
@@ -123,7 +123,7 @@ const swaggerDocs = {
               in: "song",
               description: "Song to be added",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Song",
               },
             },
           ],
@@ -131,7 +131,7 @@ const swaggerDocs = {
             201: {
               description: "Created",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Song",
               },
             },
           },
@@ -147,7 +147,7 @@ const swaggerDocs = {
                 in: "film",
                 description: "Title of the film searched for",
                 schema: {
-                  $ref: "#/definitions/films",
+                  $ref: "#/definitions/Film",
                 },
               },
             ],
@@ -155,7 +155,7 @@ const swaggerDocs = {
               200: {
                 description: "OK",
                 schema: {
-                  $ref: "#/definitions/films",
+                  $ref: "#/definitions/Film",
                 },
               },
             },
@@ -171,7 +171,7 @@ const swaggerDocs = {
                 in: "podcast",
                 description: "Title of the podcast searched for",
                 schema: {
-                  $ref: "#/definitions/films",
+                  $ref: "#/definitions/Podcast",
                 },
               },
             ],
@@ -179,7 +179,7 @@ const swaggerDocs = {
               200: {
                 description: "OK",
                 schema: {
-                  $ref: "#/definitions/films",
+                  $ref: "#/definitions/Podcast",
                 },
               },
             },
@@ -195,7 +195,7 @@ const swaggerDocs = {
                 in: "song",
                 description: "Title of the song searched for",
                 schema: {
-                  $ref: "#/definitions/films",
+                  $ref: "#/definitions/Song",
                 },
               },
             ],
@@ -203,7 +203,7 @@ const swaggerDocs = {
               200: {
                 description: "OK",
                 schema: {
-                  $ref: "#/definitions/films",
+                  $ref: "#/definitions/Song",
                 },
               },
             },
@@ -220,7 +220,7 @@ const swaggerDocs = {
               in: "film",
               description: "Id of the film searched for",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Film",
               },
             },
           ],
@@ -228,7 +228,7 @@ const swaggerDocs = {
             200: {
               description: "OK",
               schema: {
-               $ref: "#/definitions/films",
+               $ref: "#/definitions/Film",
               },
             },
           },
@@ -242,7 +242,7 @@ const swaggerDocs = {
               in: "film",
               description: "Id of the film wanting to patch",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Film",
               },
             },
           ],
@@ -250,7 +250,7 @@ const swaggerDocs = {
             202: {
               description: "Patched",
               schema: {
-               $ref: "#/definitions/films",
+               $ref: "#/definitions/Film",
               },
             },
            }
@@ -264,7 +264,7 @@ const swaggerDocs = {
               in: "film",
               description: "Id of the film wanting to delete",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Film",
               },
             },
           ],
@@ -272,7 +272,7 @@ const swaggerDocs = {
             203: {
               description: "Deleted",
               schema: {
-               $ref: "#/definitions/films",
+               $ref: "#/definitions/Film",
               },
             },
            }
@@ -288,7 +288,7 @@ const swaggerDocs = {
               in: "podcast",
               description: "Id of the podcast searched for",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Podcast",
               },
             },
           ],
@@ -296,7 +296,7 @@ const swaggerDocs = {
             200: {
               description: "OK",
               schema: {
-               $ref: "#/definitions/films",
+               $ref: "#/definitions/Podcast",
               },
             },
           },
@@ -310,7 +310,7 @@ const swaggerDocs = {
               in: "podcast",
               description: "Id of the podcast wanting to patch",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Podcast",
               },
             },
           ],
@@ -318,7 +318,7 @@ const swaggerDocs = {
             202: {
               description: "Patched",
               schema: {
-               $ref: "#/definitions/films",
+               $ref: "#/definitions/Podcast",
               },
             },
            }
@@ -332,7 +332,7 @@ const swaggerDocs = {
               in: "podcast",
               description: "Id of the podcast wanting to delete",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Podcast",
               },
             },
           ],
@@ -340,7 +340,7 @@ const swaggerDocs = {
             203: {
               description: "Deleted",
               schema: {
-               $ref: "#/definitions/films",
+               $ref: "#/definitions/Podcast",
               },
             },
            }
@@ -356,7 +356,7 @@ const swaggerDocs = {
               in: "song",
               description: "Id of the song searched for",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Song",
               },
             },
           ],
@@ -364,7 +364,7 @@ const swaggerDocs = {
             200: {
               description: "OK",
               schema: {
-               $ref: "#/definitions/films",
+               $ref: "#/definitions/Song",
               },
             },
           },
@@ -378,7 +378,7 @@ const swaggerDocs = {
               in: "song",
               description: "Id of the song wanting to patch",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Song",
               },
             },
           ],
@@ -386,7 +386,7 @@ const swaggerDocs = {
             202: {
               description: "Patched",
               schema: {
-               $ref: "#/definitions/films",
+               $ref: "#/definitions/Song",
               },
             },
            }
@@ -400,7 +400,7 @@ const swaggerDocs = {
               in: "song",
               description: "Id of the song wanting to delete",
               schema: {
-                $ref: "#/definitions/films",
+                $ref: "#/definitions/Song",
               },
             },
           ],
@@ -408,7 +408,7 @@ const swaggerDocs = {
             203: {
               description: "Deleted",
               schema: {
-               $ref: "#/definitions/films",
+               $ref: "#/definitions/Song",
               },
             },
            }
@@ -421,20 +421,66 @@ const swaggerDocs = {
     
   
     definitions: {
-      Book: {
-        required: ["title", "author"],
-        properties: {
-          title: {
-            type: "string",
+      Film:{
+        required:["title","year","available","genre","studio"],
+        properties:{
+          title:{
+            type:"string",
           },
-          author: {
-            type: "string",
+          year:{
+            type:"date"
           },
-          pages: {
-            type: "integer",
+          available:{
+            type:"boolean"
           },
-        },
+          genre:{
+            type: "string"
+          },
+          studio:{
+            type: "string"
+          }
+        }
       },
-    },
-  };
+      Podcast:{
+        required:["title","year","available","topic","broadcaster"],
+        properties:{
+        title:{
+          type:"string"
+        },
+        year:{
+          type:"date"
+        },
+        available:{
+          type:"boolean"
+        },
+        topic:{
+          type:"string"
+        },
+        broadcaster:{
+          type:"string"
+        }
+      }
+      },
+      Song:{
+        required:["title","year","available","topic","broadcaster"],
+        properties:{
+          title:{
+            type:"string",
+          },
+          year:{
+            type:"date"
+          },
+          available:{
+            type:"boolean"
+          },
+          genre:{
+            type: "string"
+          },
+          artist:{
+            type: "string"
+          }
+        }
+    }
+  }
+}
   export default swaggerDocs;
