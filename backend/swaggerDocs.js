@@ -428,7 +428,7 @@ const swaggerDocs = {
             type:"string",
           },
           year:{
-            type:"date"
+            type:"integer"
           },
           available:{
             type:"boolean"
@@ -448,7 +448,7 @@ const swaggerDocs = {
           type:"string"
         },
         year:{
-          type:"date"
+          type:"integer"
         },
         available:{
           type:"boolean"
@@ -468,7 +468,7 @@ const swaggerDocs = {
             type:"string",
           },
           year:{
-            type:"date"
+            type:"integer"
           },
           available:{
             type:"boolean"
