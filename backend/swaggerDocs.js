@@ -48,7 +48,7 @@ const swaggerDocs = {
           parameters: [
             {
               name: "film",
-              in: "film",
+              in: "body",
               description: "Film to be added",
               schema: {
                 $ref: "#/definitions/Film",
@@ -84,7 +84,7 @@ const swaggerDocs = {
           parameters: [
             {
               name: "podcast",
-              in: "podcast",
+              in: "body",
               description: "Podcast to be added",
               schema: {
                 $ref: "#/definitions/Podcast",
@@ -120,7 +120,7 @@ const swaggerDocs = {
           parameters: [
             {
               name: "song",
-              in: "song",
+              in: "body",
               description: "Song to be added",
               schema: {
                 $ref: "#/definitions/Song",
@@ -247,8 +247,8 @@ const swaggerDocs = {
             },
           ],
           responses: {
-            202: {
-              description: "Patched",
+            200: {
+              description: "OK",
               schema: {
                $ref: "#/definitions/Film",
               },
@@ -269,8 +269,8 @@ const swaggerDocs = {
             },
           ],
           responses: {
-            203: {
-              description: "Deleted",
+            200: {
+              description: "OK",
               schema: {
                $ref: "#/definitions/Film",
               },
@@ -315,8 +315,8 @@ const swaggerDocs = {
             },
           ],
           responses: {
-            202: {
-              description: "Patched",
+            200: {
+              description: "OK",
               schema: {
                $ref: "#/definitions/Podcast",
               },
@@ -338,7 +338,7 @@ const swaggerDocs = {
           ],
           responses: {
             203: {
-              description: "Deleted",
+              description: "OK",
               schema: {
                $ref: "#/definitions/Podcast",
               },
@@ -405,8 +405,8 @@ const swaggerDocs = {
             },
           ],
           responses: {
-            203: {
-              description: "Deleted",
+            200: {
+              description: "OK",
               schema: {
                $ref: "#/definitions/Song",
               },
