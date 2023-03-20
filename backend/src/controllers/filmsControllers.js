@@ -46,7 +46,7 @@ export const addFilm = async (req, res) => {
   film.save(film).then((todo) => res.status(201).send(todo));
 };
 
-//PATCH podcast by ID
+//PATCH film by ID
 export const patchFilm = async (req, res) => {
   //check if ID has 24 characters
   if (req.params.id.length != 24) {
@@ -63,7 +63,7 @@ export const patchFilm = async (req, res) => {
   }
 };
 
-//DELETE podcast by ID
+//DELETE film by ID
 export const deleteFilm = async (req, res) => {
   //check if ID has 24 characters
   if (req.params.id.length != 24) {
