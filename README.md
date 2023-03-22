@@ -10,7 +10,7 @@
 
 2. - **Dateninkonsistenz**
      \_ **Problem:** Wenn mehrere Benutzer versuchen gleichzeitig die gleiche Ressource zu ändern, kann es zur Inkonsistenz in den Daten führen.
-     \_ **Mögliche Lösung:** Eine mögliche Lösung in solchem Fall wäre asynchrone Kommunikation. Hier wird der Datenaustausch über einen Message-Broker durchgeführt, dieser ist der Sender und alle anderen sind die Empfänger. Die Nachrichten werden in eine Warteschlange auf dem Message-Broker abgelegt und nach dem FIFO-Prinzip bearbeitet.
+     \_ **Mögliche Lösung:** Eine mögliche Lösung in solchem Fall wäre asynchrone Kommunikation. Hier wird der Datenaustausch über einen Message-Broker durchgeführt, dieser ist der Sender und alle anderen sind die Empfänger. Die Nachrichten werden in eine Warteschlange auf dem Message-Broker abgelegt und nach dem FIFO-Prinzip bearbeitet. <br>
    - **Skalierbarkeitsproblem**
      \_ **Problem:** Wenn das API nicht für eine große Anzahl an Benutzer gedacht ist, kann es zur Überlastung des Servers und einer Verlangsamung bzw. zum Ausfall des Systems führen.
      \_ **Mögliche Lösung:** Dieses Problem kann gelöst werden, indem das API so entworfen wir, dass es auf mehreren Servern ausgeführt wird und Lastverteilung-Technologien eingesetzt werden.
