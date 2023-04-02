@@ -11,6 +11,7 @@ const swaggerDocs = {
     },
     host: "localhost:4000",
     basePath: "/medien",
+    // definiton of tags
     tags: [
       {
         name: "Films",
@@ -28,7 +29,9 @@ const swaggerDocs = {
     ],
     consumes: ["application/json"],
     produces: ["application/json"],
+    // definition of paths
     paths: {
+      // general get and post operations
       "/film": {
         get: {
           tags: ["Films"],
@@ -137,6 +140,7 @@ const swaggerDocs = {
           },
         },
       },
+      //get by title operations
       "/filmtitle": {
         get: {
           tags: ["Films"],
@@ -210,7 +214,8 @@ const swaggerDocs = {
           },
        },
       
-      "/filmid": {
+      // get, patch and delete by ID operations
+       "/filmid": {
         get: {
           tags: ["Films"],
           summary: "Get a specific film by id",
@@ -419,7 +424,7 @@ const swaggerDocs = {
       
     
     
-  
+    // definition of the schema, including properties and their types
     definitions: {
       Film:{
         required:["title","year","available","genre","studio"],

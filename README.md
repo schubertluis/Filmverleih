@@ -1,6 +1,14 @@
 # Filmverleih
 
-## Prüfungsfragen:
+## Beschreibung
+
+Unsere Software bietet einen vielseitigen Medienverleih.
+Zu unseren Angeboten zählen Filme, Musik und Podcasts, welche über den Titel oder eine eindeutige ID identifizierbar sind.
+Inhalte dieser Typen können über die benutzerfreundliche Oberfläche abgerufen werden.
+Des Weiteren wird dem Nutzer eine Suchfunktion geboten.
+Bei Fragen zum Aufbau hilft die detaillierte API, welche mit REST API und Swagger umgesetzt wurde.
+
+### Prüfungsfragen:
 
 1. Eine Gesamtarchitektur bei verteilten Systemen beschreibt die Struktur und Organisation eines Systems aus mehreren miteinander verbundenen Komponenten.
    Ein Web-API spielt in einer Gesamtarchitektur bei verteilten Systemen eine wichtige Rolle als Schnittstelle zur Kommunikation und Interaktion zwischen verschiedenen Komponenten und Anwendungen.
